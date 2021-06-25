@@ -8,40 +8,87 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <form action="/" method="get">
-      <label for="firstname"> First name </label>
-      <input
-        required
-        id="firstname"
-        type="text"
-        autofocus
-        name="firstname"
-        pattern="^[A-Z][a-z]{1,32}$"
-      />
-      <label for="lastname"> Last name </label>
-      <input
-        required
-        id="username"
-        type="text"
-        name="username"
-        pattern="^[A-Z][a-z]{1,32}$"
-      />
-      <label for="email"> email </label>
-      <input
-        required
-        id="email"
-        type="email"
-        name="email"
-        pattern="^[a-zA-Z0-9]{1,16}@[a-z]{1,9}\.[a-z]{1,4}$"
-      />
-      <label for="password"> password </label>
-      <input
-        required
-        id="password"
-        type="password"
-        name="password"
-        pattern="(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9]).{6,32"
-      />
+    <form action="/" method="post" enctype="multipart/form-data">
+      <fieldset>
+        <legend>Personal data</legend>
+        <label for="firstname"> First name </label>
+        <input
+          required
+          id="firstname"
+          type="text"
+          autofocus
+          name="firstname"
+          pattern="^[A-Z][a-z]{1,32}$"
+        /><br>
+        <label for="lastname"> Last name </label>
+        <input required
+          id="username"
+          type="text"
+          name="username"
+          pattern="^[A-Z][a-z]{1,32}$"
+        />
+      </fieldset>
+
+      <fieldset>
+        <legend>Login data</legend>
+        <label for="email"> email </label>
+        <input
+          required
+          id="email"
+          type="email"
+          name="email"
+          pattern="^[a-zA-Z0-9]{1,16}@[a-z]{1,9}\.[a-z]{1,4}$"
+        /><br>
+        <label for="password"> password </label>
+        <input
+          id="password"
+          type="password"
+          name="password"
+          required
+          value="1234testTest"
+          pattern="(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9]).{6,32"
+        />
+      </fieldset>
+      
+      <input name="file" type="file">
+      
+      <!-- <p>Pick your gender:</p>
+      <label> <input type="radio" name="gender" value="Male" required/> Male </label>
+      <label>
+        <input type="radio" name="gender" value="Female" /> Female
+      </label>
+      <label for="">
+        <input type="checkbox" name="isAdult"> Are you adult?
+      </label> -->
+
+      <!--
+        <input type="text"> (default value)
+        <input type="radio">
+        <input type="password">
+        <input type="email">
+        <input type="checkbox">
+
+
+        <input type="button">
+      <input type="color">
+      <input type="date">
+      <input type="datetime-local">
+      <input type="hidden">
+      <input type="image">
+      <input type="month">
+      <input type="number">
+
+      <input type="range">
+      <input type="reset">
+      <input type="search">
+      <input type="submit">
+      <input type="tel">
+
+      <input type="time">
+      <input type="url">
+      <input type="week"> 
+    -->
+
       <button type="submit">ОТПРАВЬ МЕНЯ</button>
     </form>
   </body>
